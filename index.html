@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Dear Aarzoo ❤️</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <title>Happy Birthday Aarzoo ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #ff85a2;
-            --secondary-color: #ff4778;
-            --background-color: #fff5f7;
-            --text-color: #333;
-            --shadow-color: rgba(255, 71, 120, 0.3);
+            --primary-color: #ff6b95;
+            --secondary-color: #ffb6c1;
+            --dark-color: #d14d72;
+            --light-color: #fff0f3;
+            --text-color: #4a4a4a;
         }
 
         * {
@@ -21,39 +21,50 @@
         }
 
         body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--background-color);
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light-color);
             color: var(--text-color);
-            line-height: 1.6;
             overflow-x: hidden;
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 50L50 0C22.4 0 0 22.4 0 50s22.4 50 50 50c27.6 0 50-22.4 50-50h-50z' fill='%23ffccd5' fill-opacity='0.2'/%3E%3C/svg%3E");
+            position: relative;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff6b95' width='24px' height='24px'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E") no-repeat;
+            background-size: contain;
+            opacity: 0.7;
         }
 
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
             background-color: rgba(255, 255, 255, 0.9);
-            padding: 10px 0;
-            box-shadow: 0 2px 10px var(--shadow-color);
-            z-index: 100;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(209, 77, 114, 0.3);
+            text-align: center;
+            position: relative;
+            z-index: 1;
         }
 
         h1, h2 {
             font-family: 'Dancing Script', cursive;
-            color: var(--secondary-color);
+            color: var(--dark-color);
             margin-bottom: 20px;
         }
 
@@ -62,491 +73,471 @@
         }
 
         h2 {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
         }
 
-        .card {
-            background-color: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 10px 30px var(--shadow-color);
-            margin: 20px 0;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-        }
-
-        .message {
-            font-size: 1.2rem;
-            margin-bottom: 25px;
-            line-height: 1.8;
-        }
-
-        .hindi-shayari {
-            font-style: italic;
-            margin: 20px 0;
-            padding: 15px;
-            background-color: rgba(255, 133, 162, 0.1);
-            border-radius: 10px;
+        p {
+            margin-bottom: 20px;
+            line-height: 1.6;
             font-size: 1.1rem;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+        .emoji {
+            font-size: 1.5rem;
+            margin: 0 3px;
+        }
+
+        .message {
+            background-color: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .shayari {
+            font-family: 'Poppins', sans-serif;
+            font-style: italic;
+            background-color: var(--secondary-color);
             color: white;
-            font-size: 18px;
-            font-weight: 600;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: white;
             border: none;
+            padding: 12px 30px;
+            margin: 15px 10px;
             border-radius: 50px;
+            font-size: 1rem;
             cursor: pointer;
-            margin: 10px;
             transition: all 0.3s ease;
-            box-shadow: 0 5px 15px var(--shadow-color);
+            font-family: 'Poppins', sans-serif;
+            box-shadow: 0 5px 15px rgba(209, 77, 114, 0.4);
         }
 
         .btn:hover {
+            background-color: var(--dark-color);
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px var(--shadow-color);
-        }
-
-        .btn:active {
-            transform: translateY(-1px);
-        }
-
-        .btn-yes {
-            background: linear-gradient(to right, #4CAF50, #2E7D32);
         }
 
         .btn-no {
-            background: linear-gradient(to right, #f44336, #d32f2f);
+            background-color: #f2f2f2;
+            color: var(--text-color);
         }
 
-        .emoji {
-            font-size: 1.5em;
-            margin: 0 3px;
-            display: inline-block;
-            animation: pulse 1.5s infinite;
+        .btn-no:hover {
+            background-color: #e6e6e6;
         }
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-
-        .heart {
-            display: inline-block;
-            font-size: 20px;
-            color: var(--secondary-color);
-            animation: heartbeat 1.5s infinite;
-        }
-
-        @keyframes heartbeat {
-            0% { transform: scale(1); }
-            25% { transform: scale(1.1); }
-            40% { transform: scale(1); }
-            60% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-
-        .screen {
+        .section {
             display: none;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
+            animation: fadeIn 1s ease;
         }
 
-        .screen.active {
+        #birthday-section {
             display: block;
-            opacity: 1;
-            transform: translateY(0);
         }
 
-        #birthday-screen {
-            display: block;
-            opacity: 1;
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        .music-control {
+        .music-controls {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: white;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
             z-index: 100;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .music-icon {
-            font-size: 24px;
-            color: var(--secondary-color);
+        .music-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
         }
 
         /* Fireworks */
-        .firework {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 5px;
-            height: 5px;
-            border-radius: 50%;
-            box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1);
-            animation: firework-animation 2s ease-out infinite;
-        }
-
-        @keyframes firework-animation {
-            0% {
-                width: 5px;
-                height: 5px;
-                box-shadow: 0 0 0 0 white;
-                opacity: 1;
-                transform: translate(-50%, -50%) scale(1);
-            }
-            100% {
-                width: 5px;
-                height: 5px;
-                box-shadow: 0 0 0 400px transparent;
-                opacity: 0;
-                transform: translate(-50%, -50%) scale(30);
-            }
-        }
-
-        .fireworks-container {
+        .pyro {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            pointer-events: none;
-            z-index: 1;
+            z-index: -1;
+            display: none;
         }
 
-        .proposal-response {
-            font-family: 'Pacifico', cursive;
-            font-size: 2.5rem;
-            margin: 30px 0;
-            color: var(--secondary-color);
-            text-shadow: 2px 2px 4px var(--shadow-color);
-        }
-
-        /* Floating hearts */
-        .floating-heart {
+        .pyro > .before, .pyro > .after {
             position: absolute;
-            color: var(--secondary-color);
-            font-size: 20px;
-            pointer-events: none;
-            animation: float-up 10s linear infinite;
-            opacity: 0.8;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            box-shadow: 0 0 #fff;
+            animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
         }
-
-        @keyframes float-up {
-            0% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0.8;
+        
+        .pyro > .after {
+            animation-delay: 1.25s, 1.25s, 1.25s;
+            animation-duration: 1.25s, 1.25s, 6.25s;
+        }
+        
+        @keyframes bang {
+            to {
+                box-shadow: -70px -115.67px #00ff73, 44px -179.67px #ff00c8, 226px -29.67px #ff2f00, 79px -126.67px #00ff8c, 135px -142.67px #0400ff, -70px -170.67px #ff7300, 222px -342.67px #ffd000, -231px -342.67px #0066ff, -214px -294.67px #00ff59, 72px -113.67px #cc00ff, -208px -223.67px #4000ff, 177px -275.67px #ff006f, -243px -175.67px #c400ff, -166px -54.67px #ff0080, 38px -276.67px #5100ff, -112px -338.67px #ff0084, 226px -50.67px #00f2ff, 180px -322.67px #0011ff, -108px -261.67px #00fff7, 175px -65.67px #0051ff, 120px -339.67px #ff0077, 24px -155.67px #00ffee, 228px -56.67px #ffb700, 103px -130.67px #00fbff, 189px -338.67px #ff7300, -239px -226.67px #00ffb3, -238px -133.67px #ff001a, -232px -338.67px #ff5500, -14px -315.67px #00ffb7, -18px -299.67px #ff0033, -67px -47.67px #00aeff, 30px -378.67px #00ff40, 31px -82.67px #00ff51, -290px -252.67px #00e1ff, -107px -108.67px #ff8c00, 239px -155.67px #ffc800, -291px -209.67px #fb00ff, 52px -34.67px #ff001e, 98px -118.67px #00ff3c, 168px -243.67px #a2ff00, -198px -386.67px #004dff, 112px -222.67px #0048ff, 127px -126.67px #00ff26;
             }
-            100% {
-                transform: translateY(-50vh) rotate(360deg);
+        }
+        
+        @keyframes gravity {
+            to {
+                transform: translateY(200px);
                 opacity: 0;
+            }
+        }
+        
+        @keyframes position {
+            0%, 19.9% {
+                margin-top: 10%;
+                margin-left: 40%;
+            }
+            20%, 39.9% {
+                margin-top: 40%;
+                margin-left: 30%;
+            }
+            40%, 59.9% {
+                margin-top: 20%;
+                margin-left: 70%;
+            }
+            60%, 79.9% {
+                margin-top: 30%;
+                margin-left: 20%;
+            }
+            80%, 99.9% {
+                margin-top: 30%;
+                margin-left: 80%;
             }
         }
 
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2.2rem;
-            }
-            h2 {
-                font-size: 1.8rem;
-            }
-            .message {
-                font-size: 1rem;
-            }
-            .card {
+            .container {
                 padding: 20px;
             }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
             .btn {
                 padding: 10px 20px;
-                font-size: 16px;
+                font-size: 0.9rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="music-control" id="music-control">
-        <span class="music-icon">🔊</span>
-    </div>
-
+    <div class="floating-hearts" id="hearts"></div>
+    
     <div class="container">
-        <!-- Birthday Screen -->
-        <section id="birthday-screen" class="screen active">
-            <div class="card">
-                <h1>Happy Birthday, Aarzoo! <span class="emoji">🎂</span></h1>
-                <div class="message">
-                    On this special day, I want to celebrate the amazing person you are. 
-                    <span class="emoji">✨</span> Every moment with you is a blessing in my life. 
-                    <span class="emoji">💖</span>
-                </div>
-                <div class="hindi-shayari">
-                    जन्मदिन की हज़ारों दुआएं, खुशियों से भरा हो तेरा जहां, <br>
-                    हर लम्हा मुस्कुराओ तुम, हर दिन हो मुबारक तुम्हें। <br>
-                    <span class="heart">❤️</span>
-                </div>
-                <button class="btn" id="birthday-btn">Read My Blessings <span class="emoji">🙏</span></button>
+        <!-- Birthday Section -->
+        <section id="birthday-section" class="section">
+            <h1>Happy Birthday Aarzoo! 🎂✨</h1>
+            <p>
+                To the most beautiful woman in my world
+                <span class="emoji">💖</span>
+                Today is all about celebrating you!
+                <span class="emoji">🎉</span>
+            </p>
+            <div class="message">
+                <p>
+                    On this special day, I want to tell you how much joy and happiness you bring into my life. 
+                    Every moment with you is a blessing, and I cherish each smile, each laugh, and each memory we create together.
+                    <span class="emoji">💫</span>
+                </p>
             </div>
-        </section>
-
-        <!-- Blessings Screen -->
-        <section id="blessings-screen" class="screen">
-            <div class="card">
-                <h2>My Blessings For You <span class="emoji">✨</span></h2>
-                <div class="message">
-                    May your life be filled with endless joy and laughter. <br>
-                    May all your dreams come true and your heart's desires be fulfilled. <br>
-                    May you always be surrounded by love and happiness. <br>
-                    <span class="emoji">🌟</span> <span class="emoji">💫</span> <span class="emoji">✨</span>
-                </div>
-                <div class="hindi-shayari">
-                    ख़ुशियाँ तेरे क़दम चूमें, ग़म तेरे सामने झुके, <br>
-                    ज़िंदगी तेरे इशारों पे चले, ये दुआ है दिल से मेरे। <br>
-                    <span class="heart">❤️</span>
-                </div>
-                <button class="btn" id="blessings-btn">Read My Feelings <span class="emoji">💕</span></button>
+            
+            <div class="shayari">
+                इस खूबसूरत जहां में तुम्हारी खूबसूरती का जवाब नहीं,<br>
+                जिस तरह तुम मुस्कुराती हो उसका हिसाब नहीं।<br>
+                जन्मदिन मुबारक हो तुम्हें मेरी जान,<br>
+                तुम्हारे बिना मेरी ज़िन्दगी का कोई मायने नहीं।<br>
             </div>
+            
+            <button class="btn" onclick="showSection('blessings-section')">See My Blessings For You ❤️</button>
         </section>
-
-        <!-- Romantic Messages Screen -->
-        <section id="romantic-screen" class="screen">
-            <div class="card">
-                <h2>My Heart Speaks... <span class="emoji">💘</span></h2>
-                <div class="message">
-                    Aarzoo, you light up my world like nobody else. <span class="emoji">✨</span><br>
-                    Your smile is my favorite sunrise. <span class="emoji">🌅</span><br>
-                    Your laughter is my favorite melody. <span class="emoji">🎵</span><br>
-                    Your love is my greatest blessing. <span class="emoji">💑</span><br>
-                    Every moment with you feels like a dream. <span class="emoji">😍</span><br>
-                    I cherish every second we spend together. <span class="emoji">💖</span><br>
-                    You're the queen of my heart and soul. <span class="emoji">👑</span><br>
-                    I love you more than words can express! <span class="emoji">😘💋</span>
-                </div>
-                <div class="hindi-shayari">
-                    तेरी हंसी में छुपा है जहां मेरा सारा, <br>
-                    तेरी आँखों में है सपने मेरे सजे, <br>
-                    तेरे होने से ही धड़कता है दिल ये मेरा, <br>
-                    तू ही तो है जिसके लिए जी रहा हूँ मैं। <br>
-                    <span class="heart">❤️</span>
-                </div>
-                <button class="btn" id="romantic-btn">There's Something More... <span class="emoji">💝</span></button>
+        
+        <!-- Blessings Section -->
+        <section id="blessings-section" class="section">
+            <h2>My Blessings For You <span class="emoji">🙏</span><span class="emoji">💖</span></h2>
+            
+            <div class="message">
+                <p>
+                    May your day be as bright and beautiful as your smile.
+                    <span class="emoji">✨</span>
+                    May your life be filled with as much joy as you bring to others.
+                    <span class="emoji">🌟</span>
+                </p>
+                <p>
+                    May your dreams take flight and your heart remain light.
+                    <span class="emoji">🦋</span>
+                    May every candle on your cake represent a wish that comes true.
+                    <span class="emoji">🎂</span>
+                </p>
             </div>
-        </section>
-
-        <!-- Proposal Screen -->
-        <section id="proposal-screen" class="screen">
-            <div class="card">
-                <h2>My Dearest Aarzoo... <span class="emoji">💍</span></h2>
-                <div class="message">
-                    Since you came into my life, everything has changed for the better. <br>
-                    You're the reason behind my smile, the peace in my heart. <br>
-                    I want to spend every moment with you, creating beautiful memories together. <br><br>
-                    
-                    <strong>Will you be mine forever?</strong> <span class="emoji">💑</span><br>
-                    <span class="emoji">💋</span> <span class="emoji">💘</span> <span class="emoji">💖</span>
-                </div>
-                <div>
-                    <button class="btn btn-yes" id="proposal-yes-btn">Yes, I Will! <span class="emoji">💍</span></button>
-                    <button class="btn btn-no" id="proposal-no-btn">No <span class="emoji">💔</span></button>
-                </div>
+            
+            <div class="shayari">
+                तेरी राहों में कभी दुख न आए,<br>
+                तेरी आँखों में कभी आंसू न आए।<br>
+                हर दिन हो तेरा खुशियों से भरा,<br>
+                तेरे जीवन में कभी गम का साया न आए।<br>
             </div>
+            
+            <button class="btn" onclick="showSection('romantic-section')">See My Romantic Messages 💝</button>
         </section>
-
-        <!-- Yes Response Screen -->
-        <section id="yes-screen" class="screen">
-            <div class="fireworks-container" id="fireworks-container"></div>
-            <div class="card">
-                <h1>You Said YES! <span class="emoji">💍</span></h1>
-                <div class="proposal-response">I Love You So Much! <span class="emoji">💖</span></div>
-                <div class="message">
-                    You've made me the happiest person alive! <span class="emoji">🥰</span><br>
-                    This is just the beginning of our beautiful journey together. <span class="emoji">👫</span><br>
-                    I promise to love you more with each passing day. <span class="emoji">💕</span><br>
-                    Thank you for choosing me! <span class="emoji">😘💋</span>
-                </div>
-                <div class="hindi-shayari">
-                    तेरा हाँ कहना, मेरी ज़िंदगी का सबसे खूबसूरत पल है, <br>
-                    अब हर लम्हा तेरे साथ जीना है, हर सांस तेरे नाम की है। <br>
-                    <span class="heart">❤️</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- No Response Screen -->
-        <section id="no-screen" class="screen">
-            <div class="card">
-                <h2>It's Okay... <span class="emoji">💔</span></h2>
-                <div class="message">
-                    I understand and respect your decision. <br>
-                    My love for you will remain unchanged. <br>
-                    I'll always be here for you, no matter what. <br>
+        
+        <!-- Romantic Messages Section -->
+        <section id="romantic-section" class="section">
+            <h2>My Heart Beats For You <span class="emoji">💓</span></h2>
+            
+            <div class="message">
+                <p>
+                    Aarzoo, you are the most beautiful dream that came true in my life.
                     <span class="emoji">💝</span>
-                </div>
-                <div class="hindi-shayari">
-                    तेरी खुशी में ही खुशी है मेरी, <br>
-                    चाहे वो मेरे बिना ही क्यों ना हो। <br>
-                    <span class="heart">❤️</span>
-                </div>
-                <button class="btn" id="reconsider-btn">Reconsider? <span class="emoji">🙏</span></button>
+                    Your smile is my favorite sunrise, and your laughter is my favorite melody.
+                    <span class="emoji">🎵</span>
+                </p>
+                <p>
+                    Every moment I spend with you feels like a blessing.
+                    <span class="emoji">✨</span>
+                    My heart skips a beat whenever I see you.
+                    <span class="emoji">💞</span>
+                </p>
+                <p>
+                    You are my sunshine on cloudy days, my shelter in the storm, and my paradise in this chaotic world.
+                    <span class="emoji">☀️</span>
+                    I love the way your eyes sparkle when you're happy, the way you scrunch your nose when you laugh.
+                    <span class="emoji">😍</span>
+                </p>
             </div>
+            
+            <div class="shayari">
+                तेरी आँखों का समंदर, तेरा हसीन चेहरा,<br>
+                मैं तो खो गया हूँ इस प्यार के शहर में।<br>
+                तुझसे मिलके जिंदगी हुई है रोशन,<br>
+                तेरे बिन अधूरी है हर एक किरण।<br>
+            </div>
+            
+            <div class="message">
+                <p>
+                    I love you more than words can express. You are my today, my tomorrow, my forever.
+                    <span class="emoji">💕</span>
+                    Your love is the greatest gift I've ever received.
+                    <span class="emoji">🎁</span>
+                </p>
+                <p>
+                    I want to hold your hand, look into your beautiful eyes, and kiss your sweet lips.
+                    <span class="emoji">😘</span><span class="emoji">😘</span>
+                </p>
+            </div>
+            
+            <button class="btn" onclick="showSection('proposal-section')">I Have Something to Ask... 💍</button>
+        </section>
+        
+        <!-- Proposal Section -->
+        <section id="proposal-section" class="section">
+            <h2>Aarzoo, My Love <span class="emoji">💍</span><span class="emoji">💘</span></h2>
+            
+            <div class="message">
+                <p>
+                    From the moment I met you, I knew you were the one I wanted to share my life with.
+                    <span class="emoji">💞</span>
+                </p>
+                <p>
+                    You make me a better person every day. Your love, kindness, and beauty captivate me in ways I never thought possible.
+                    <span class="emoji">✨</span>
+                </p>
+                <p>
+                    I promise to love you every day, to cherish every moment, and to always be there for you through thick and thin.
+                    <span class="emoji">🤞</span>
+                </p>
+                <h2>Will You Be Mine Forever? <span class="emoji">❤️</span></h2>
+            </div>
+            
+            <button id="yes-btn" class="btn" onclick="showYesResponse()">Yes, I Will! 💖</button>
+            <button id="no-btn" class="btn btn-no" onclick="showNoResponse()">No 💔</button>
+        </section>
+        
+        <!-- Yes Response Section -->
+        <section id="yes-section" class="section">
+            <h1>You've Made Me The Happiest Person Alive! <span class="emoji">💝</span></h1>
+            
+            <div class="message">
+                <p>
+                    Thank you for saying YES! I promise to make every day special and fill our life with love and happiness.
+                    <span class="emoji">💑</span>
+                </p>
+                <p>
+                    I love you more than anything in this world, Aarzoo!
+                    <span class="emoji">😘</span><span class="emoji">💖</span><span class="emoji">😘</span>
+                </p>
+            </div>
+            
+            <div class="shayari">
+                तेरे हाँ कहने से खिल उठा है मेरा जहान,<br>
+                तेरे साथ पूरा होगा हर अरमान।<br>
+                तेरे प्यार में डूबा रहूँगा हर पल,<br>
+                तू ही मेरी धड़कन, तू ही मेरी जान।<br>
+            </div>
+        </section>
+        
+        <!-- No Response Section -->
+        <section id="no-section" class="section">
+            <h2>I Understand... <span class="emoji">💔</span></h2>
+            
+            <div class="message">
+                <p>
+                    I respect your decision and your feelings.
+                    <span class="emoji">🙏</span>
+                </p>
+                <p>
+                    No matter what, I will always cherish the moments we've shared and the love we've had.
+                    <span class="emoji">💗</span>
+                </p>
+                <p>
+                    Thank you for being honest. Know that I'll always be here for you if you need me.
+                </p>
+            </div>
+            
+            <button class="btn" onclick="showSection('proposal-section')">Go Back</button>
         </section>
     </div>
 
+    <!-- Fireworks Effect -->
+    <div class="pyro" id="fireworks">
+        <div class="before"></div>
+        <div class="after"></div>
+    </div>
+    
+    <!-- Music Controls -->
+    <div class="music-controls">
+        <button id="music-btn" class="music-btn" onclick="toggleMusic()">♫</button>
+    </div>
+    
+    <!-- Audio Element -->
     <audio id="background-music" loop>
-        <source src="https://cdn.jsdelivr.net/gh/himalayasingh/music-player-1@latest/music/2.mp3" type="audio/mp3">
+        <source src="https://cdn.jsdelivr.net/gh/soundpack/birthday-wishes@master/background-music.mp3" type="audio/mp3">
     </audio>
-
+    
     <script>
-        // DOM Elements
-        const birthdayScreen = document.getElementById('birthday-screen');
-        const blessingsScreen = document.getElementById('blessings-screen');
-        const romanticScreen = document.getElementById('romantic-screen');
-        const proposalScreen = document.getElementById('proposal-screen');
-        const yesScreen = document.getElementById('yes-screen');
-        const noScreen = document.getElementById('no-screen');
-        const fireworksContainer = document.getElementById('fireworks-container');
-
-        // Buttons
-        const birthdayBtn = document.getElementById('birthday-btn');
-        const blessingsBtn = document.getElementById('blessings-btn');
-        const romanticBtn = document.getElementById('romantic-btn');
-        const proposalYesBtn = document.getElementById('proposal-yes-btn');
-        const proposalNoBtn = document.getElementById('proposal-no-btn');
-        const reconsiderBtn = document.getElementById('reconsider-btn');
-        const musicControl = document.getElementById('music-control');
-
-        // Audio
-        const backgroundMusic = document.getElementById('background-music');
-
-        // Helper functions
-        function showScreen(screenToShow) {
-            const screens = document.querySelectorAll('.screen');
-            screens.forEach(screen => {
-                screen.classList.remove('active');
+        // Function to show a specific section and hide others
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.style.display = 'none';
             });
-            screenToShow.classList.add('active');
-            window.scrollTo(0, 0);
-        }
-
-        function createHearts() {
-            for (let i = 0; i < 20; i++) {
-                setTimeout(() => {
-                    const heart = document.createElement('div');
-                    heart.classList.add('floating-heart');
-                    heart.innerHTML = '❤️';
-                    heart.style.left = Math.random() * 100 + 'vw';
-                    heart.style.animationDuration = Math.random() * 5 + 5 + 's';
-                    document.body.appendChild(heart);
-
-                    setTimeout(() => {
-                        heart.remove();
-                    }, 10000);
-                }, i * 300);
-            }
-        }
-
-        function createFireworks() {
-            for (let i = 0; i < 15; i++) {
-                setTimeout(() => {
-                    const firework = document.createElement('div');
-                    firework.classList.add('firework');
-                    firework.style.left = Math.random() * 100 + '%';
-                    firework.style.top = Math.random() * 100 + '%';
-                    firework.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-                    firework.style.animationDelay = Math.random() * 2 + 's';
-                    fireworksContainer.appendChild(firework);
-
-                    setTimeout(() => {
-                        firework.remove();
-                    }, 2000);
-                }, i * 300);
-            }
-        }
-
-        // Event Listeners
-        birthdayBtn.addEventListener('click', () => {
-            showScreen(blessingsScreen);
-        });
-
-        blessingsBtn.addEventListener('click', () => {
-            showScreen(romanticScreen);
-        });
-
-        romanticBtn.addEventListener('click', () => {
-            showScreen(proposalScreen);
-        });
-
-        proposalYesBtn.addEventListener('click', () => {
-            // Store the response for tracking
-            localStorage.setItem('proposal_response', 'yes');
-            showScreen(yesScreen);
-            createFireworks();
-            setInterval(createFireworks, 3000);
-            createHearts();
-        });
-
-        proposalNoBtn.addEventListener('click', () => {
-            // Store the response for tracking
-            localStorage.setItem('proposal_response', 'no');
-            showScreen(noScreen);
-        });
-
-        reconsiderBtn.addEventListener('click', () => {
-            showScreen(proposalScreen);
-        });
-
-        // Music control
-        musicControl.addEventListener('click', () => {
-            if (backgroundMusic.paused) {
-                backgroundMusic.play();
-                musicControl.querySelector('.music-icon').textContent = '🔊';
+            
+            // Show the requested section
+            document.getElementById(sectionId).style.display = 'block';
+            
+            // Scroll to top of the section
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Log which section was viewed (for tracking)
+            console.log('Viewed section: ' + sectionId);
+            
+            // If it's the yes response, show fireworks
+            if (sectionId === 'yes-section') {
+                document.getElementById('fireworks').style.display = 'block';
             } else {
-                backgroundMusic.pause();
-                musicControl.querySelector('.music-icon').textContent = '🔇';
+                document.getElementById('fireworks').style.display = 'none';
             }
-        });
-
-        // Auto start music on interaction (to bypass browser autoplay restrictions)
-        document.addEventListener('click', () => {
-            if (backgroundMusic.paused) {
-                backgroundMusic.play().catch(() => {
-                    // Couldn't autoplay, just continue without music
-                });
-                musicControl.querySelector('.music-icon').textContent = '🔊';
+        }
+        
+        // Function to handle "Yes" response
+        function showYesResponse() {
+            // Show the yes section
+            showSection('yes-section');
+            
+            // Save response to localStorage (so you can check later)
+            localStorage.setItem('proposalResponse', 'YES');
+            
+            // Log the response (for tracking)
+            console.log('PROPOSAL RESPONSE: YES');
+            
+            // Show fireworks
+            document.getElementById('fireworks').style.display = 'block';
+        }
+        
+        // Function to handle "No" response
+        function showNoResponse() {
+            // Show the no section
+            showSection('no-section');
+            
+            // Save response to localStorage (so you can check later)
+            localStorage.setItem('proposalResponse', 'NO');
+            
+            // Log the response (for tracking)
+            console.log('PROPOSAL RESPONSE: NO');
+        }
+        
+        // Function to toggle background music
+        function toggleMusic() {
+            const music = document.getElementById('background-music');
+            const musicBtn = document.getElementById('music-btn');
+            
+            if (music.paused) {
+                music.play();
+                musicBtn.textContent = '♪';
+            } else {
+                music.pause();
+                musicBtn.textContent = '♫';
             }
-        }, { once: true });
-
-        // Initialize floating hearts
-        window.addEventListener('load', () => {
-            createHearts();
-            setInterval(createHearts, 15000);
-        });
-
-        // Console log to help track the proposal response
-        window.addEventListener('storage', (event) => {
-            if (event.key === 'proposal_response') {
-                console.log('She chose: ' + event.n
+        }
+        
+        // Generate floating hearts
+        function createHearts() {
+            const heartsContainer = document.getElementById('hearts');
+            const numHearts = 30;
+            
+            for (let i = 0; i < numHearts; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                
+                // Random positioning and animation
+                const size = Math.random() * 15 + 10;
+                const left = Math.random() * 100;
+                const animationDuration = Math.random() * 10 + 10;
+                const opacity = Math.random() * 0.5 + 0.3;
+                
+                heart.style.width = size + 'px';
+                heart.style.height = size + 'px';
+                heart.style.left = left + 'vw';
+                heart.style.top = '-50px';
+                heart.style.opacity = opacity;
+                heart.style.animation = `float ${animationDuration}s linear infinite`;
+                heart.style.animationDelay = Math.random() * 5 + 's';
+                
+                // Random rotation
+                const rotation = Math.r
